@@ -14,18 +14,18 @@
       <a class="main-btn" href=""><img class="logo-image" src="img/logo-sedona.svg" width="138" height="70" alt="Логотип Sedona"></a>
       <nav class="navigation" aria-label="Навигация по сайту">
         <ul class="nav-list">
-          <li class="nav-item"><a class="nav-btn" href="">Информация</a></li>
-          <li class="nav-item"><a class="nav-btn" href="">Фото и видео</a></li>
-          <li class="nav-item"><a class="nav-btn" href="">Карта штата</a></li>
-          <li class="nav-item"><a class="nav-btn" href="">Гостиницы</a></li>
+          <li class="nav-item"><a class="nav-ref" href="">Информация</a></li>
+          <li class="nav-item"><a class="nav-ref" href="">Фото и видео</a></li>
+          <li class="nav-item"><a class="nav-ref" href="">Карта штата</a></li>
+          <li class="nav-item"><a class="nav-ref" href="">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section class="welcome">
+      <div class="welcome">
         <img class="welcome-image" src="img/welcome.png" width="459" height="353" alt="Добро пожаловать в Седону">
-      </section>
+      </div>
       <section class="reasons">
         <h2 class="main-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
         <p class="main-desc">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
@@ -38,7 +38,7 @@
             <img class="reason-image" src="img/reason-image-1.jpg" width="800" height="256" alt="Фото города">
             <ul class="advantages-list">
               <li class="advantages-item advantages-item-1">
-                <h3 class="advantage-title">Жилье</h3>
+                <h3 class="advantage-title">Жильё</h3>
                 <p class="advantage-desc">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
               </li>
               <li class="advantages-item advantages-item-2">
@@ -81,20 +81,20 @@
         <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
           <div class="checkin">
             <label class="lab-checkin" for="check-in">Дата заезда:</label>
-            <input class="in-checkin" id="check-in" type="text" name="check-in" placeholder="24 апреля 2017">
+            <input class="in-checkin" id="check-in" type="text" name="check-in" value="24 апреля 2017">
           </div>
           <div class="checkout">
             <label class="lab-checkout" for="check-out">Дата заезда:</label>
-            <input class="in-checkout" id="check-out" type="text" name="check-out" placeholder="4 июля 2017">
+            <input class="in-checkout" id="check-out" type="text" name="check-out" value="4 июля 2017">
           </div>
           <div class="visiters-count">
             <label class="lab-adult" for="adult-count">Взрослые:</label>
             <button type="button" class="btn btn-minus">минус</button>
-            <input class="in-adult" id="adult-count" type="text" name="adult-count" placeholder="2">
+            <input class="in-adult" id="adult-count" type="text" name="adult-count" value="2">
             <button type="button" class="btn btn-plus">плюс</button>
             <label class="lab-child" for="child-count">Дети:</label>
             <button type="button" class="btn btn-minus">минус</button>
-            <input class="in-child" id="child-count" type="text" name="child-count" placeholder="0">
+            <input class="in-child" id="child-count" type="text" name="child-count" value="0">
             <button type="button" class="btn btn-plus">плюс</button>
           </div>
           <button class="search-btn" type="submit">Найти</button>
@@ -102,7 +102,7 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer footer-index">
       <span class="hashtag">#VisitSedona</span>
       <ul class="social-list">
         <li class="social-item"><a class="social-btn" href="#"><img class="social-image" src="img/twitter.svg" alt="Твитер" width="17" height="15"></a></li>
