@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Отели</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <a class="main-btn" href=""><img class="logo-image" src="img/logo-sedona.svg" width="138" height="70" alt="Логотип Sedona"></a>
+      <nav class="navigation" aria-label="Навигация по сайту">
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-ref" href="">Информация</a></li>
+          <li class="nav-item"><a class="nav-ref" href="">Фото и видео</a></li>
+          <li class="nav-item"><a class="nav-ref" href="">Карта штата</a></li>
+          <li class="nav-item"><a class="nav-ref" href="">Гостиницы</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <form class="filter-form" action="" method="post">
+        <fieldset class="infrastructure">
+          <legend class="infrastructure-title">Инфраструктура:</legend>
+          <ul class="infrastructure-list">
+            <li class="infrastructure-item">
+              <input class="check" type="checkbox" name="pool" id="check-pool" checked>
+              <label class="label lab-check" for="check-pool">Бассейн</label>
+            </li>
+            <li class="infrastructure-item">
+              <input class="check" type="checkbox" name="parking" id="check-parking">
+              <label class="label lab-check" for="check-parking">Парковка</label>
+            </li>
+            <li class="infrastructure-item">
+              <input class="check" type="checkbox" name="Wi-Fi" id="check-wifi">
+              <label class="label lab-check" for="check-wifi">Wi-Fi</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="housing">
+          <legend class="housing-title">Тип жилья:</legend>
+          <ul class="housing-list">
+            <li class="housing-item">
+              <input class="check" type="checkbox" name="hotel" id="check-hotel" checked>
+              <label class="label lab-check" for="check-hotel">Гостиница</label>
+            </li>
+            <li class="housing-item">
+              <input class="check" type="checkbox" name="motel" id="check-motel" checked>
+              <label class="label lab-check" for="check-motel">Мотель</label>
+            </li>
+            <li class="housing-item">
+              <input class="check" type="checkbox" name="apartments" id="check-apartments" checked>
+              <label class="label lab-check" for="check-apartments">Апартаменты</label>
+            </li>
+          </ul>
+        </fieldset>
+        <div class="filter-range">
+          <div class="filter-range-title">Стоимость в сутки (р):</div>
+          <div class="price-controls">
+            <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+            <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+          </div>
+          <div class="range-controls">
+            <div class="scale">
+              <div class="bar"></div>
+            </div>
+            <div class="range-toggle range-toggle-min"></div>
+            <div class="range-toggle range-toggle-max"></div>
+          </div>
+          <button class="btn-transparent" type="submit">Показать</button>
+        </div>
+      </form>
+      <div class="sort">
+        <b class="sort-title">Сортровка:</b>
+        <ul class="sort-list">
+          <li class="sort-item"><a class="sort-btn" href="">По цене</a></li>
+          <li class="sort-item"><a class="sort-btn" href="">По типу</a></li>
+          <li class="sort-item"><a class="sort-btn" href="">По рейтингу</a></li>
+        </ul>
+        <ul class="updown-list">
+          <li class="updown-item"><a class="updown-btn"></a></li>
+          <li class="updown-item"><a class="updown-btn"></a></li>
+        </ul>
+      </div>
+    </main>
+  </div>
+</body></html>
