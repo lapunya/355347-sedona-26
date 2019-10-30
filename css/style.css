@@ -487,6 +487,7 @@ body {
   padding-top: 27px;
   padding-left: 67px;
   padding-right: 73px;
+  padding-bottom: 7px;
   background-image: url('../img/filter-background.png');
   background-repeat: no-repeat;
   background-size: 1200px 562px;
@@ -692,4 +693,121 @@ body {
 .btn-transparent:hover {
   color: #000000;
   background: #ffffff;
+}
+
+.sort {
+  display: flex;
+  align-items: baseline;
+  padding-top: 18px;
+  padding-left: 71px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.sort-count {
+  margin-right: 49px;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.sort-title {
+  margin-right: 40px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.sort-list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin-right: 501px;
+}
+
+.sort-item {
+  margin-right: 34px;
+}
+
+.sort-item:last-child {
+  margin-right: 0;
+}
+
+.sort-btn {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: #81b3d2;
+}
+
+.updown-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 34px;
+  justify-content: space-between;
+}
+
+.updown-btn {
+  width: 11px;
+  height: 10px;
+  display: block;
+}
+
+.up-btn {
+  background-image: url(../img/icon-up-dir.svg);
+}
+
+.down-btn {
+  background-image: url(../img/icon-down-dir.svg);
+}
+
+.hotels-list {
+  list-style: none;
+  padding: 0;
+}
+
+.hotels-item {
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.hotel-image {
+  margin-right: 30px;
+}
+
+.hotel-title {
+  margin: 0;
+  margin-bottom: 19px;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.hotel-type {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #333333;
+  text-transform: uppercase;
+}
+
+.hotel-price {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #333333;
+  text-transform: uppercase;
 }
