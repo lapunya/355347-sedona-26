@@ -27,12 +27,14 @@ body {
 .header {
   padding-top: 14px;
   padding-left: 73px;
+  padding-right: 73px;
   background-color: #ffffff;
   display: flex;
   position: relative;
 }
 
 .navigation {
+  width: 100%;
   margin-bottom: 16px;
 }
 
@@ -44,7 +46,7 @@ body {
 }
 
 .nav-item {
-  margin-right: 143px;
+  margin-right: 146px;
 }
 
 .nav-item:nth-child(2) {
@@ -53,19 +55,31 @@ body {
 
 .nav-item:last-child {
   margin-right: 0;
+  margin-left: auto;
 }
 
-.nav-ref {
+.nav-link {
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
   color: #000000;
   text-decoration: none;
   text-transform: uppercase;
-
 }
 
-.main-btn {
+.nav-link:hover {
+  color: #81b3d2;
+}
+
+.nav-link:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.nav-item .nav-link-current {
+  color: #766357;
+}
+
+.main-link {
   position: absolute;
   left: 50%;
   top: 0;
@@ -298,18 +312,29 @@ body {
   vertical-align: top;
 }
 
+.interest-btn:hover {
+  background-color: #604e43;
+  cursor: pointer;
+}
+
+.interest-btn:active {
+  background-color: #503e33;
+}
+
 .search-form {
-  width: 575px;
+  width: 570px;
   margin: 0 auto;
   margin-bottom: 78px;
-  padding: 55px;
-  padding-left: 59px;
+  padding: 56px;
+  padding-left: 57px;
+  padding-right: 55px;
   background-color: #ffffff;
 }
 
 .checkin,
 .checkout {
   margin-bottom: 31px;
+  position: relative;
 }
 
 .visiters-count {
@@ -340,6 +365,18 @@ body {
   padding-left: 13px;
 }
 
+.calendar-btn {
+  border: none;
+  position: absolute;
+  right: 4px;
+  top: 6px;
+  background-color: #f2f2f2;
+}
+
+.calendar-image {
+  opacity: 0.3;
+}
+
 .visiters-count {
   display: flex;
   align-items: center;
@@ -353,13 +390,18 @@ body {
   margin-right: 0;
   margin-left: 0;
   width: 38px;
-  height: 38px;
+  height: 40px;
   text-align: center;
+}
+
+.lab-child {
+  margin-left: 49px;
+  margin-right: 25px;
 }
 
 .in-child {
   width: 38px;
-  height: 38px;
+  height: 40px;
   text-align: center;
 }
 
@@ -374,6 +416,10 @@ body {
   position: relative;
 }
 
+.btn:hover {
+  cursor: pointer;
+}
+
 .btn::before,
 .btn::after {
   content: '';
@@ -383,6 +429,17 @@ body {
   width: 12px;
   height: 3px;
   background-color: #a9a9a9;
+}
+
+.btn:hover::before,
+.btn:hover::after {
+  background-color: #000000;
+}
+
+.btn:active::before,
+.btn:active::after {
+  background-color: #81b3d2;
+  outline: none;
 }
 
 .btn-plus::after {
@@ -399,8 +456,17 @@ body {
   border: none;
 }
 
+.search-form input[type="text"]:hover {
+  background-color: #ebebeb;
+}
+
+.search-form input[type="text"]:focus {
+  background-color: #ffffff;
+  border: 2px solid #e5e5e5;
+}
+
 .search-btn {
-  padding: 22px 196px;
+  padding: 15px 192px;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -410,8 +476,18 @@ body {
   border: none;
 }
 
+.search-btn:hover {
+  background-color: #669ec0;
+  cursor: pointer;
+}
+
+.search-btn:active {
+  background-color: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .map {
-  padding-bottom: 198px;
+  padding-bottom: 119px;
   background-image: url('../img/map.png');
   background-repeat: no-repeat;
   background-size: 1200px 593px;
@@ -433,6 +509,7 @@ body {
 
 .hashtag {
   display: flex;
+  margin-top: -9px;
   justify-content: center;
   width: 400px;
   font-size: 21px;
@@ -465,20 +542,48 @@ body {
   align-items: center;
 }
 
+.social-btn:hover {
+  background-color: #669ec0;
+}
+
+.social-btn:active {
+  background-color: #5496bd;
+}
+
+.social-btn:active .social-image {
+  opacity: 0.3;
+}
+
 .academy-wrap {
   width: 400px;
+  margin-top: -6px;
   display: flex;
   justify-content: center;
 }
 
 .websiteby {
+  margin-top: 6px;
   margin-right: 8px;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: uppercase;
 }
 
 .academy-btn {
   width: 115px;
   height: 41px;
 }
+
+.academy-btn:hover {
+  fill: #81b3d2;
+}
+
+.academy-btn:active {
+  opacity: 0.3;
+}
+
 
 /*Стилизация каталога*/
 
@@ -537,17 +642,21 @@ body {
 
 .lab-check::before {
   content: '';
-  width: 25px;
+  width: 26px;
   height: 25px;
   position: absolute;
   left: -39px;
   background-image: url('../img/checkbox-off.svg');
   background-repeat: no-repeat;
-  opacity: 0.3;
+  cursor: pointer;
 }
 
 .check:checked + .lab-check::before {
   background-image: url('../img/checkbox-on.svg');
+}
+
+.check:disabled + .lab-check::before {
+  opacity: 0.1;
 }
 
 .housing {
@@ -655,8 +764,8 @@ body {
 .range-toggle {
   position: absolute;
   top: -9px;
-  width: 4px;
-  height: 4px;
+  width: 20px;
+  height: 20px;
   background: #ababab;
   border: 8px solid #ffffff;
   border-radius: 50%;
@@ -741,10 +850,25 @@ body {
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
+  color: #b2b2b2;
   text-transform: uppercase;
   text-decoration: underline;
   text-decoration-style: dotted;
   text-decoration-color: #81b3d2;
+}
+
+.sort-btn:hover {
+  color: #81b3d2;
+}
+
+.sort-btn:active {
+  color: #000000;
+  text-decoration: none;
+}
+
+.sort-btn-active {
+  color: #81b3d2;
+  text-decoration: none;
 }
 
 .updown-list {
@@ -760,6 +884,12 @@ body {
   width: 11px;
   height: 10px;
   display: block;
+  opacity: 0.3;
+}
+
+.updown-btn:hover {
+  opacity: 1;
+  cursor: pointer;
 }
 
 .up-btn {
@@ -773,6 +903,9 @@ body {
 .hotels-list {
   list-style: none;
   padding: 0;
+  margin: 0;
+  padding-right: 73px;
+  padding-left: 73px;
 }
 
 .hotels-item {
@@ -788,12 +921,17 @@ body {
 
 .hotel-title {
   margin: 0;
-  margin-bottom: 19px;
+  margin-top: -5px;
+  margin-bottom: 6px;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
+}
+
+.hotel-info {
+  margin-bottom: 16px;
 }
 
 .hotel-type {
@@ -810,4 +948,27 @@ body {
   font-weight: 400;
   color: #333333;
   text-transform: uppercase;
+}
+
+.about-link {
+  padding: 4px 16px;
+  margin-right: 3px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #81b3d2;
+}
+
+.book-link {
+  padding: 4px 17px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #766357;
 }
