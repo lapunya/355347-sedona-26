@@ -371,10 +371,23 @@ body {
   right: 4px;
   top: 6px;
   background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+.calendar-btn:active {
+  outline: none;
 }
 
 .calendar-image {
   opacity: 0.3;
+}
+
+.calendar-btn:hover .calendar-image {
+  opacity: 1;
+}
+
+.calendar-btn:active .calendar-image {
+  fill: #81b3d2;
 }
 
 .visiters-count {
@@ -414,10 +427,11 @@ body {
   padding: 20px;
   background-color: #f2f2f2;
   position: relative;
+  cursor: pointer;
 }
 
-.btn:hover {
-  cursor: pointer;
+.btn:active {
+  outline: none;
 }
 
 .btn::before,
@@ -463,6 +477,7 @@ body {
 .search-form input[type="text"]:focus {
   background-color: #ffffff;
   border: 2px solid #e5e5e5;
+  outline: none;
 }
 
 .search-btn {
@@ -811,6 +826,7 @@ body {
   padding-left: 71px;
   padding-bottom: 15px;
   border-bottom: 1px solid #e5e5e5;
+  background-color: #ffffff;
 }
 
 .sort-count {
@@ -892,26 +908,23 @@ body {
   cursor: pointer;
 }
 
-.up-btn {
-  background-image: url(../img/icon-up-dir.svg);
-}
-
-.down-btn {
-  background-image: url(../img/icon-down-dir.svg);
+.updown-btn:active,
+.updown-btn-current {
+  fill: #81b3d2;
+  opacity: 1;
 }
 
 .hotels-list {
   list-style: none;
   padding: 0;
   margin: 0;
-  padding-right: 73px;
-  padding-left: 73px;
+  background-color: #ffffff;
 }
 
 .hotels-item {
+  width: 100%;
+  padding: 30px 73px;
   display: flex;
-  padding-top: 30px;
-  padding-bottom: 30px;
   border-bottom: 1px solid #e5e5e5;
 }
 
@@ -923,15 +936,28 @@ body {
   margin: 0;
   margin-top: -5px;
   margin-bottom: 6px;
+}
+
+.hotel-link {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
+  text-decoration: none;
+}
+
+.hotel-link:hover {
+  color: #81b3d2;
+}
+
+.hotel-link:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .hotel-info {
   margin-bottom: 16px;
+  display: flex;
 }
 
 .hotel-type {
@@ -943,6 +969,8 @@ body {
 }
 
 .hotel-price {
+  margin-right: 77px;
+  margin-left: auto;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
@@ -962,6 +990,15 @@ body {
   background-color: #81b3d2;
 }
 
+.about-link:hover {
+  background-color: #669ec0;
+}
+
+.about-link:active {
+  background-color: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .book-link {
   padding: 4px 17px;
   font-size: 14px;
@@ -971,4 +1008,34 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   background-color: #766357;
+}
+
+.book-link:hover {
+  background-color: #604e43;
+}
+
+.book-link:active {
+  background-color: #503e33;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+
+.hotel-rating {
+  margin-right: 0;
+  margin-left: auto;
+  padding-top: 65px;
+  background-image: url('../img/star.svg');
+  background-position: top right;
+  background-repeat: repeat-x;
+  background-size: 18px 17px;
+}
+
+.rating-text {
+  padding: 4px 13px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #666666;
+  text-transform: uppercase;
+  background-color: #f2f2f2;
 }
