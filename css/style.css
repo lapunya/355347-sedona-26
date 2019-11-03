@@ -17,6 +17,20 @@ body {
   overflow-x: hidden;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -331,6 +345,10 @@ body {
   background-color: #ffffff;
 }
 
+.search-form-hidden {
+  display: none;
+}
+
 .checkin,
 .checkout {
   margin-bottom: 31px;
@@ -370,7 +388,7 @@ body {
   position: absolute;
   right: 4px;
   top: 6px;
-  background-color: #f2f2f2;
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -502,6 +520,7 @@ body {
 }
 
 .map {
+  min-height: 593px;
   padding-bottom: 119px;
   background-image: url('../img/map.png');
   background-repeat: no-repeat;
@@ -674,6 +693,10 @@ body {
   opacity: 0.1;
 }
 
+.check:focus + .lab-check {
+  text-decoration: underline;
+}
+
 .housing {
   border: none;
   padding: 0;
@@ -737,7 +760,7 @@ body {
 .price-controls label {
   display: inline-block;
   font-size: 14px;
-  line-height: 38px;
+  line-height: 33px;
   vertical-align: top;
   cursor: pointer;
 }
@@ -802,9 +825,9 @@ body {
 
 .btn-transparent {
   display: block;
-  margin: 0 auto;
-  padding: 6px 35px;
-  font-size: 14px;
+  margin-left: 87px;
+  padding: 7px 33px;
+  font-size: 13px;
   line-height: 20px;
   color: #ffffff;
   text-transform: uppercase;
@@ -1024,6 +1047,9 @@ body {
   margin-right: 0;
   margin-left: auto;
   padding-top: 65px;
+}
+
+.stars-image {
   background-image: url('../img/star.svg');
   background-position: top right;
   background-repeat: repeat-x;
