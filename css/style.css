@@ -324,9 +324,10 @@ body {
 }
 
 .interest-btn {
+  width: 569px;
   margin-left: 316px;
-  padding: 30px 127px 30px 139px;
-  font-size: 19px;
+  padding: 30px 116px;
+  font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   color: #ffffff;
