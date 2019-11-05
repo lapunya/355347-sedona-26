@@ -113,6 +113,7 @@ body {
   margin-bottom: 0;
   padding-top: 76px;
   padding-bottom: 79px;
+  background-color: #00ffff;
   background-image: url('../img/intro-mask.svg'), url('../img/background-photo.jpg');
   background-size: 1200px 59px, cover;
   background-repeat: no-repeat;
@@ -166,6 +167,7 @@ body {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  background-color: #81b3d2;
 }
 
 .reason-text {
@@ -204,6 +206,7 @@ body {
   color: #ffffff;
   text-transform: uppercase;
   text-align: center;
+  overflow-y: auto;
 }
 
 .reason-image {
@@ -245,6 +248,7 @@ body {
   list-style: none;
   padding: 0;
   display: flex;
+  background-color: #ffffff;
 }
 
 .advantages-item {
@@ -344,6 +348,7 @@ body {
 
 .interest-btn:active {
   background-color: #503e33;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 @keyframes shake {
@@ -383,7 +388,7 @@ body {
 }
 
 .search-form-hidden {
-  top: 100%;
+  top: -86px;
   z-index: -1;
 }
 
@@ -659,7 +664,7 @@ body {
 }
 
 .academy-btn:active {
-  opacity: 0.3;
+  fill: #bdbbbc;
 }
 
 
@@ -853,7 +858,9 @@ body {
 }
 
 .range-toggle:hover {
-  background: #1c4f80;
+  width: 22px;
+  height: 22px;
+  border-width: 9px;
 }
 
 .range-toggle-min {
@@ -994,6 +1001,10 @@ body {
 
 .hotel-image {
   margin-right: 30px;
+}
+
+.hotel-desc {
+  max-width: 500px;
 }
 
 .hotel-title {
